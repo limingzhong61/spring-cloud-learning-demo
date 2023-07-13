@@ -1,0 +1,24 @@
+logging:
+  level:
+    io.lettuce.core: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+spring:
+  redis:
+    cluster:
+      nodes: #指定分片集群的每一个节点信息
+        - 192.168.153.128:7001
+        - 192.168.153.128:7002
+        - 192.168.153.128:7003
+        - 192.168.153.128:8001
+        - 192.168.153.128:8002
+        - 192.168.153.128:8003
+
+#    sentinel:
+#      master: mymaster # 指定master名称
+#      nodes: # 指定redis-sentinel集群信息
+#        - 192.168.153.128:27001
+#        - 192.168.153.128:27002
+#        - 192.168.153.128:27003
+
+
